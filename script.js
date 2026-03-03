@@ -38,9 +38,6 @@ function changeBackgroundColor() {
     
     // Aplicar el nuevo color de fondo con transición
     document.body.style.background = backgroundColors[currentColorIndex];
-    
-    // Cambiar el integrante mostrado
-    changeMember();
 }
 
 /* ============================================
@@ -65,9 +62,13 @@ function changeMember() {
 }
 
 /* ============================================
-   EVENTO: Click en el botón de cambio de color
+   EVENTOS: Click en los botones
    ============================================ */
+// Evento para el botón de cambio de color
 document.getElementById("colorButton").addEventListener("click", changeBackgroundColor);
+
+// Evento para el botón de cambio de integrante
+document.getElementById("memberButton").addEventListener("click", changeMember);
 
 /* ============================================
    INICIALIZACIÓN

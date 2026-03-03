@@ -111,11 +111,19 @@ body {
 }
 
 /* ============================================
-   BOTÓN DE CAMBIO DE COLOR
+   BOTONES DE CONTROL
    ============================================ */
 
-.btn-color {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos generales de los botones */
+.btn-control {
     color: white;
     border: none;
     padding: 15px 40px;
@@ -123,20 +131,37 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Efecto hover en el botón */
+/* Botón de cambio de color */
+.btn-color {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Efecto hover en botón de color */
 .btn-color:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
-/* Efecto activo en el botón */
-.btn-color:active {
+/* Botón de cambio de integrante */
+.btn-member {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+/* Efecto hover en botón de miembro */
+.btn-member:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+/* Efecto activo en los botones */
+.btn-control:active {
     transform: translateY(-1px);
 }
 
