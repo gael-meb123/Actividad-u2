@@ -1,0 +1,202 @@
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
+
+/* Estilos del cuerpo y fondo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    /* Color de fondo inicial - se cambiará dinámicamente con JavaScript */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: background 0.5s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* ============================================
+   TÍTULOS Y TEXTO
+   ============================================ */
+
+/* Título principal - Nombre del equipo */
+.team-title {
+    color: #333;
+    font-size: 2.5em;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafo descriptivo */
+.description {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   SECCIÓN DE INTEGRANTES
+   ============================================ */
+
+.members-section {
+    margin: 30px 0;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Tarjeta de integrante */
+.member-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de imagen del integrante */
+.member-image {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la imagen del integrante */
+.member-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en la imagen */
+.member-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Información del integrante */
+.member-info {
+    text-align: center;
+}
+
+/* Nombre del integrante */
+#memberName {
+    color: #333;
+    font-size: 1.8em;
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+}
+
+/* Descripción del integrante */
+#memberDescription {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   BOTÓN DE CAMBIO DE COLOR
+   ============================================ */
+
+.btn-color {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto hover en el botón */
+.btn-color:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Efecto activo en el botón */
+.btn-color:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+/* Animación de aparición con fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .team-title {
+        font-size: 2em;
+    }
+
+    .btn-color {
+        padding: 12px 30px;
+        font-size: 0.95em;
+    }
+
+    .member-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .team-title {
+        font-size: 1.6em;
+    }
+
+    .description {
+        font-size: 0.95em;
+    }
+
+    .member-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #memberName {
+        font-size: 1.4em;
+    }
+}
