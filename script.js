@@ -5,14 +5,14 @@
 /* Datos de los integrantes del equipo */
 const members = [
     {
-        name: "Integrante 1",
+        name: "Gael",
         description: "Apasionado por el desarrollo web y la programación. Especializado en JavaScript y diseño responsivo. Le encanta crear interfaces creativas y funcionales.",
-        photo: "https://via.placeholder.com/200?text=Integrante+1"
+        photo: "imagenes/foto_gael.jpg"
     },
     {
-        name: "Integrante 2",
+        name: "Luis",
         description: "Experto en bases de datos y backend. Conocimientos profundos en PHP y arquitectura de aplicaciones. Enfocado en la calidad y eficiencia del código.",
-        photo: "https://via.placeholder.com/200?text=Integrante+2"
+        photo: "imagenes/foto_luis.jpg"
     }
 ];
 
