@@ -1,12 +1,29 @@
-/* ============================================
-   ESTILOS GENERALES
-   ============================================ */
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/Jost/static/Jost-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/Jost/static/Jost-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/Jost/static/Jost-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
 
 /* Estilos del cuerpo y fondo */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Jost', 'Segoe UI', sans-serif;
     /* Color de fondo inicial - se cambiará dinámicamente con JavaScript */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     transition: background 0.5s ease-in-out;
@@ -16,9 +33,15 @@ body {
     align-items: center;
 }
 
-/* ============================================
-   CONTENEDOR PRINCIPAL
-   ============================================ */
+body.font-mode-1 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+body.font-mode-2 {
+    font-size: 1.12rem;
+    font-style: italic;
+}
 
 .container {
     background-color: rgba(255, 255, 255, 0.95);
@@ -30,9 +53,6 @@ body {
     text-align: center;
 }
 
-/* ============================================
-   TÍTULOS Y TEXTO
-   ============================================ */
 
 /* Título principal - Nombre del equipo */
 .team-title {
@@ -51,10 +71,15 @@ body {
     line-height: 1.6;
 }
 
-/* ============================================
-   SECCIÓN DE INTEGRANTES
-   ============================================ */
+.datetime-message {
+    margin-top: -8px;
+    margin-bottom: 22px;
+    color: #2f3f56;
+    font-size: 1rem;
+    font-weight: 600;
+}
 
+/* Seccion de integrantes */
 .members-section {
     margin: 30px 0;
     animation: fadeIn 0.5s ease-in;
@@ -110,9 +135,6 @@ body {
     margin: 0;
 }
 
-/* ============================================
-   BOTONES DE CONTROL
-   ============================================ */
 
 /* Contenedor de botones */
 .buttons-container {
@@ -154,6 +176,16 @@ body {
     box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
 }
 
+.btn-font {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    box-shadow: 0 4px 15px rgba(253, 160, 133, 0.45);
+}
+
+.btn-font:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(253, 160, 133, 0.6);
+}
+
 /* Efecto hover en botón de miembro */
 .btn-member:hover {
     transform: translateY(-3px);
@@ -165,9 +197,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* ============================================
-   ANIMACIONES
-   ============================================ */
 
 /* Animación de aparición con fade in */
 @keyframes fadeIn {
@@ -181,9 +210,6 @@ body {
     }
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
 /* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
@@ -195,7 +221,7 @@ body {
         font-size: 2em;
     }
 
-    .btn-color {
+    .btn-control {
         padding: 12px 30px;
         font-size: 0.95em;
     }
